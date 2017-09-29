@@ -118,5 +118,27 @@ namespace AssignmentThree.operations
             }
             return B;
         }
+
+        public int IsSubSetOrEqual(ICustomSet<T> A, ICustomSet<T> B)
+        {
+            if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size())) return 2;
+            bool equal = true;
+
+            ICustomSet<T> largest = (A.Size() <= B.Size()) ? B : A;
+            ICustomSet<T> smallest = (A.Size() <= B.Size()) ? A : B;
+
+            foreach (T t in smallest)
+            {
+                if (!t.Equals(default(T)) && !largest.Contains(t))
+                {
+                    equal = false;
+                }
+            }
+
+            if (smallest.Size() == largest.Size() && equal) return 0;
+            if (equal && smallest.Equals(A)) return -1;
+            if (equal && smallest.Equals(B)) return 1;
+            return -2;
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace AssignmentThree.operations
         ICustomSet<T> Union(ICustomSet<T> A, ICustomSet<T> B);
         ICustomSet<T> Difference(ICustomSet<T> A, ICustomSet<T> B);
         ICustomSet<T> Compliment(ICustomSet<T> A, ICustomSet<T> B);
+        int IsSubSetOrEqual(ICustomSet<T> A, ICustomSet<T> B);
     }
 }

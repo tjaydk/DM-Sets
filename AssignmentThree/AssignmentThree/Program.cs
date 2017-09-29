@@ -58,18 +58,19 @@ namespace AssignmentThree
                 // If Statement is due to default value of the customSet is 0, and the array holding the set is bigger so has a few 0 values.
                 if (i != 0) Console.WriteLine("{0}", i);
             }
+            
+            Console.WriteLine("\nChecks if SubSets works");
+            A = new CustomSet<int>() { 1, 2, 3, 4 };
+            B = new CustomSet<int>() { 1, 2, 3, 4 };
+            CustomSet<int> C = new CustomSet<int>() { 1, 2, 3 };
+            CustomSet<int> D = new CustomSet<int>() { 4, 5, 6, 7 };
 
-            //List<int> A = new List<int>() { 1, 2, 3, 4 };
-            //List<int> B = new List<int>() { 1, 2, 3, 4 };
-            //List<int> C = new List<int>() { 1, 2, 3 };
-            //List<int> D = new List<int>() { 4, 5, 6, 7 };
+            Subset<int> compare = new Subset<int>();
 
-            //Subset<int> compare = new Subset<int>();
-
-            //Console.WriteLine("Set a is the same as set b so it should return 0: RESULT " + compare.isSubsetOrEqual(A, B));
-            //Console.WriteLine("Set b is a subset of set a so it should return -1: RESULT " + compare.isSubsetOrEqual(A, C));
-            //Console.WriteLine("Set a is a subset of set b so it should return 1: RESULT " + compare.isSubsetOrEqual(C, A));
-            //Console.WriteLine("Set a and set b is completly different so it should return -2: RESULT " + compare.isSubsetOrEqual(A, D));
+            Console.WriteLine("Set a is the same as set b so it should return 0: RESULT " + setOps.IsSubSetOrEqual(A, B));
+            Console.WriteLine("Set b is a subset of set a so it should return 1: RESULT " + setOps.IsSubSetOrEqual(A, C));
+            Console.WriteLine("Set a is a subset of set b so it should return -1: RESULT " + setOps.IsSubSetOrEqual(C, A));
+            Console.WriteLine("Set a and set b is completly different so it should return -2: RESULT " + setOps.IsSubSetOrEqual(A, D));
 
             Console.WriteLine("\nPress any key to exit");
             Console.ReadKey();
