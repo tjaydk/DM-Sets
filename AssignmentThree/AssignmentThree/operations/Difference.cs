@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace AssignmentThree.operations
 {
@@ -17,7 +15,6 @@ namespace AssignmentThree.operations
                     resultSet.Add(t);
                 }
             }
-            // Somethhing 
 
             return resultSet;
         }

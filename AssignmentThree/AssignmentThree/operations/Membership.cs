@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AssignmentThree.Operations
+﻿namespace AssignmentThree.Operations
 {
     class Membership
     {
