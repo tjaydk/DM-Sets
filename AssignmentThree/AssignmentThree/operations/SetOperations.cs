@@ -5,7 +5,7 @@ namespace AssignmentThree.operations
 {
     class SetOperations<T> : ISetOperations<T>
     {
-        public ICustomSet<T> Membership(T t, ICustomSet<T> B)
+        public ICustomSet<T> Membership(T t, ICustomSet<T> A)
         {
             throw new NotImplementedException();
         }
