@@ -8,6 +8,11 @@ namespace AssignmentThree
     {
         static void Main(string[] args)
         {
+            //Compliment<int> c = new Compliment<int>();
+            //List<int> A = new List<int>() { 1, 2, 3, 4 };
+            //List<int> B = new List<int>() { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //List<int> c = c.FindCompliment(A, B);
+
             Intersection<int> test = new Intersection<int>();
             HashSet<int> a = new HashSet<int>() { 2,3,4,5,6};
             HashSet<int> b = new HashSet<int>() { 2,3,4,7,8};
