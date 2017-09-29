@@ -34,17 +34,15 @@ namespace AssignmentThree.operations
                 throw new FormatException("List is infinite");
             }
 
-            CustomSet<T> resultSet = new CustomSet<T>();
-
             foreach (T t in A)
-            {
-                if (B.Contains(t))
+            { 
+                if (!B.Contains(t))
                 {
-                    resultSet.Add(t);
+                    A.Delete(t);
                 }
             }
 
-            return resultSet;
+            return A;
         }
 
         /// <summary>
@@ -60,23 +58,15 @@ namespace AssignmentThree.operations
                 throw new FormatException("List is infinite");
             }
 
-            ICustomSet<T> resultSet = new CustomSet<T>();
-
-            foreach (T t in A)
-            {
-                resultSet.Add(t);
-            }
-
             foreach (T t in B)
             {
-                if (!resultSet.Contains(t))
+                if (!A.Contains(t))
                 {
-                    resultSet.Add(t);
+                    A.Add(t);
                 }
             }
-
-            Console.WriteLine(A);
-            return resultSet;
+            
+            return A;
         }
 
         /// <summary>
@@ -92,16 +82,14 @@ namespace AssignmentThree.operations
                 throw new FormatException("List is infinite");
             }
 
-            CustomSet<T> resultSet = new CustomSet<T>();
-
-            foreach (T t in A)
+            foreach (T t in B)
             {
-                if (!B.Contains(t))
+                if (A.Contains(t))
                 {
-                    resultSet.Add(t);
+                    A.Delete(t);
                 }
             }
-            return resultSet;
+            return A;
         }
 
         /// <summary>
@@ -117,16 +105,14 @@ namespace AssignmentThree.operations
                 throw new FormatException("List is infinite");
             }
 
-            CustomSet<T> resultSet = new CustomSet<T>();
-
-            foreach (T t in B)
+            foreach (T t in A)
             {
-                if (!A.Contains(t))
+                if (B.Contains(t))
                 {
-                    resultSet.Add(t);
+                    B.Delete(t);
                 }
             }
-            return resultSet;
+            return B;
         }
 
         /// <summary>

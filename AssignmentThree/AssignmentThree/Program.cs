@@ -27,6 +27,8 @@ namespace AssignmentThree
                 Console.WriteLine("{0}", i);
             }
 
+            A = new CustomSet<int>() { 1, 2, 3, 4 };
+            B = new CustomSet<int>() { 3, 4, 5, 6 };
             Console.WriteLine("\nChecks if Union works");
             Console.WriteLine("Create a union between set A with set B. Should return a set with the values 1, 2, 3, 4, 5 and 6");
             resultSet = setOps.Union(A, B);
@@ -36,6 +38,8 @@ namespace AssignmentThree
                 Console.WriteLine("{0}", i);
             }
 
+            A = new CustomSet<int>() { 1, 2, 3, 4 };
+            B = new CustomSet<int>() { 3, 4, 5, 6 };
             Console.WriteLine("\nChecks if Difference works");
             Console.WriteLine("Find the numbers that set A has but B doesn't. Should return a set with the values 1, 2");
             resultSet = setOps.Difference(A, B);
@@ -45,6 +49,8 @@ namespace AssignmentThree
                 if (i != 0) Console.WriteLine("{0}", i);
             }
 
+            A = new CustomSet<int>() { 1, 2, 3, 4 };
+            B = new CustomSet<int>() { 3, 4, 5, 6 };
             Console.WriteLine("\nChecks if Compliment works");
             Console.WriteLine("Finds the compliment set used for a. Should return a set with the values 5 and 6");
             resultSet = setOps.Compliment(A, B);
