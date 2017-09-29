@@ -24,8 +24,7 @@ namespace AssignmentThree
             Console.WriteLine("Printing results: ");
             foreach (int i in resultSet)
             {
-                // If Statement is due to default value of the customSet is 0, and the array holding the set is bigger so has a few 0 values.
-                if (i != 0) Console.WriteLine("{0}", i);
+                Console.WriteLine("{0}", i);
             }
 
             Console.WriteLine("\nChecks if Union works");
@@ -34,8 +33,7 @@ namespace AssignmentThree
             Console.WriteLine("Printing results: ");
             foreach (int i in resultSet)
             {
-                // If Statement is due to default value of the customSet is 0, and the array holding the set is bigger so has a few 0 values.
-                if (i != 0) Console.WriteLine("{0}", i);
+                Console.WriteLine("{0}", i);
             }
 
             Console.WriteLine("\nChecks if Difference works");
@@ -44,7 +42,6 @@ namespace AssignmentThree
             Console.WriteLine("Printing results: ");
             foreach (int i in resultSet)
             {
-                // If Statement is due to default value of the customSet is 0, and the array holding the set is bigger so has a few 0 values.
                 if (i != 0) Console.WriteLine("{0}", i);
             }
 
@@ -54,7 +51,6 @@ namespace AssignmentThree
             Console.WriteLine("Printing results: ");
             foreach (int i in resultSet)
             {
-                // If Statement is due to default value of the customSet is 0, and the array holding the set is bigger so has a few 0 values.
                 if (i != 0) Console.WriteLine("{0}", i);
             }
             

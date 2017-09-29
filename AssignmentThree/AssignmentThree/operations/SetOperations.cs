@@ -60,16 +60,22 @@ namespace AssignmentThree.operations
                 throw new FormatException("List is infinite");
             }
 
-            ICustomSet<T> resultSet = A;
+            ICustomSet<T> resultSet = new CustomSet<T>();
 
-            foreach (T i in B)
+            foreach (T t in A)
             {
-                if (!A.Contains(i))
+                resultSet.Add(t);
+            }
+
+            foreach (T t in B)
+            {
+                if (!resultSet.Contains(t))
                 {
-                    resultSet.Add(i);
+                    resultSet.Add(t);
                 }
             }
 
+            Console.WriteLine(A);
             return resultSet;
         }
 
@@ -111,11 +117,16 @@ namespace AssignmentThree.operations
                 throw new FormatException("List is infinite");
             }
 
-            foreach (T t in A)
+            CustomSet<T> resultSet = new CustomSet<T>();
+
+            foreach (T t in B)
             {
-                if (B.Contains(t)) B.Delete(t);
+                if (!A.Contains(t))
+                {
+                    resultSet.Add(t);
+                }
             }
-            return B;
+            return resultSet;
         }
 
         /// <summary>
@@ -138,8 +149,7 @@ namespace AssignmentThree.operations
 
             foreach (T t in smallest)
             {
-                // the !t.Equals(default(T) is due to the custom set having default values populating the set array.
-                if (!t.Equals(default(T)) && !largest.Contains(t))
+                if (!largest.Contains(t))
                 {
                     equal = false;
                 }

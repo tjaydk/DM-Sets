@@ -4,7 +4,8 @@ using System.Collections.Generic;
 namespace AssignmentThree.model
 {
     /// <summary>
-    /// Custom created HashSet
+    /// Custom created HashSet.
+    /// DOES NOT ACCEPT THE DEFAULT VALUE OF T WITH THE ENUMERATOR
     /// </summary>
     /// <typeparam name="T"></typeparam>
     class CustomSet<T> : ICustomSet<T>
@@ -14,7 +15,7 @@ namespace AssignmentThree.model
         private int count;
         // The Set.
         private T[] keys;
-        
+
         public CustomSet()
         {
             M = 8;
@@ -40,7 +41,7 @@ namespace AssignmentThree.model
                 }
             }
             keys[i] = key;
-            
+
             // If there is a new entry the DoubleArray method is called, in case the array has to be doubled.
             if (newEntry)
             {
@@ -89,7 +90,7 @@ namespace AssignmentThree.model
             }
             return false;
         }
-        
+
         /// <summary>
         /// Returns the size of the set.
         /// </summary>
@@ -163,7 +164,10 @@ namespace AssignmentThree.model
         {
             foreach (T t in keys)
             {
-                yield return t;
+                if (!t.Equals(default(T)))
+                {
+                    yield return t;
+                }
             }
         }
 
