@@ -5,9 +5,20 @@ namespace AssignmentThree.operations
 {
     class SetOperations<T> : ISetOperations<T>
     {
-        public ICustomSet<T> Membership(T t, ICustomSet<T> A)
+        /// <summary>
+        /// Returns if t is a member of set A.
+        /// </summary>
+        /// <param name="t"></param>
+        /// <param name="A"></param>
+        /// <returns></returns>
+        public bool Membership(T t, ICustomSet<T> A)
         {
-            throw new NotImplementedException();
+            if (Double.IsInfinity(A.Size()))
+            {
+                throw new FormatException("List is infinite");
+            }
+
+            return A.Contains(t);
         }
 
         /// <summary>
@@ -18,7 +29,7 @@ namespace AssignmentThree.operations
         /// <returns></returns>
         public ICustomSet<T> Intersection(ICustomSet<T> A, ICustomSet<T> B)
         {
-            if (Double.IsInfinity(B.Size()))
+            if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size()))
             {
                 throw new FormatException("List is infinite");
             }
@@ -44,7 +55,7 @@ namespace AssignmentThree.operations
         /// <returns></returns>
         public ICustomSet<T> Union(ICustomSet<T> A, ICustomSet<T> B)
         {
-            if (Double.IsInfinity(B.Size()))
+            if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size()))
             {
                 throw new FormatException("List is infinite");
             }
@@ -70,7 +81,7 @@ namespace AssignmentThree.operations
         /// <returns></returns>
         public ICustomSet<T> Difference(ICustomSet<T> A, ICustomSet<T> B)
         {
-            if (Double.IsInfinity(B.Size()))
+            if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size()))
             {
                 throw new FormatException("List is infinite");
             }
@@ -95,7 +106,7 @@ namespace AssignmentThree.operations
         /// <returns></returns>
         public ICustomSet<T> Compliment(ICustomSet<T> A, ICustomSet<T> B)
         {
-            if (Double.IsInfinity(B.Size()))
+            if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size()))
             {
                 throw new FormatException("List is infinite");
             }
