@@ -1,5 +1,6 @@
 ﻿using AssignmentThree.model;
 using System;
+using System.Collections.Generic;
 
 namespace AssignmentThree.operations
 {
@@ -60,7 +61,7 @@ namespace AssignmentThree.operations
                 throw new FormatException("List is infinite");
             }
 
-            CustomSet<T> resultSet = new CustomSet<T>();
+            ICustomSet<T> resultSet = A;
 
             foreach (T i in B)
             {
@@ -111,9 +112,9 @@ namespace AssignmentThree.operations
                 throw new FormatException("List is infinite");
             }
 
-            foreach (T item in A)
+            foreach (T t in A)
             {
-                if (B.Contains(item)) B.Delete(item);
+                if (B.Contains(t)) B.Delete(t);
             }
             return B;
         }
