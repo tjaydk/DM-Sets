@@ -119,6 +119,16 @@ namespace AssignmentThree.operations
             return B;
         }
 
+        /// <summary>
+        /// returns 0 if two sets are equal.
+        /// returns 1 if A is a subset of B.
+        /// returns -1 if B is a subset of A.
+        /// returns -2 if the sets are completly different.
+        /// returns 2 if either of the sets are infinite.
+        /// </summary>
+        /// <param name="A"></param>
+        /// <param name="B"></param>
+        /// <returns></returns>
         public int IsSubSetOrEqual(ICustomSet<T> A, ICustomSet<T> B)
         {
             if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size())) return 2;
@@ -129,6 +139,7 @@ namespace AssignmentThree.operations
 
             foreach (T t in smallest)
             {
+                // the !t.Equals(default(T) is due to the custom set having default values populating the set array.
                 if (!t.Equals(default(T)) && !largest.Contains(t))
                 {
                     equal = false;
