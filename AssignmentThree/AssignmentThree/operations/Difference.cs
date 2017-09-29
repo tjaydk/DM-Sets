@@ -2,13 +2,13 @@
 
 namespace AssignmentThree.operations
 {
-    class Difference <T>
+    class Difference<T>
     {
         public HashSet<T> difference(List<T> a, List<T> b)
         {
             HashSet<T> resultSet = new HashSet<T>();
-            
-            foreach( T t in a)
+
+            foreach (T t in a)
             {
                 if (!b.Contains(t))
                 {
@@ -19,5 +19,5 @@ namespace AssignmentThree.operations
             return resultSet;
         }
 
-}
+    }
 }
