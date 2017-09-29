@@ -15,9 +15,7 @@ namespace AssignmentThree.operations
                     resultSet.Add(t);
                 }
             }
-
             return resultSet;
         }
-
     }
 }
