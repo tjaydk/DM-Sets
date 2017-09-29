@@ -11,7 +11,7 @@ namespace AssignmentThree.subsets
             bool equal = true;
 
             HashSet<T> largest = (A.Count <= B.Count) ? new HashSet<T>(B) : new HashSet<T>(A);
-            List<T> smallest = (largest.Equals(A)) ? B : A;
+            List<T> smallest = (A.Count <= B.Count) ? A : B;
 
             for (int j = 0; j < smallest.Count; j++)
             {
