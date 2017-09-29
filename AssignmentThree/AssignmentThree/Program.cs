@@ -42,8 +42,8 @@ namespace AssignmentThree
             Subset<int> compare = new Subset<int>();
 
             Console.WriteLine("Set a is the same as set b so it should return 0: RESULT " + compare.isSubsetOrEqual(A, B));
-            Console.WriteLine("Set b is a subset of set a so it should return -1: RESULT " + compare.isSubsetOrEqual(A, C));
-            Console.WriteLine("Set a is a subset of set b so it should return 1: RESULT " + compare.isSubsetOrEqual(C, A));
+            Console.WriteLine("Set b is a subset of set a so it should return 1: RESULT " + compare.isSubsetOrEqual(A, C));
+            Console.WriteLine("Set a is a subset of set b so it should return -1: RESULT " + compare.isSubsetOrEqual(C, A));
             Console.WriteLine("Set a and set b is completly different so it should return -2: RESULT " + compare.isSubsetOrEqual(A, D));
 
             Console.WriteLine("Press any key to exit");
