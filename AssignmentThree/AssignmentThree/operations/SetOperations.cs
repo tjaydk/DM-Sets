@@ -13,10 +13,7 @@ namespace AssignmentThree.operations
         /// <returns></returns>
         public bool Membership(T t, ICustomSet<T> A)
         {
-            if (Double.IsInfinity(A.Size()))
-            {
-                throw new FormatException("List is infinite");
-            }
+            IsInfinite(A);
 
             return A.Contains(t);
         }
@@ -29,10 +26,8 @@ namespace AssignmentThree.operations
         /// <returns></returns>
         public ICustomSet<T> Intersection(ICustomSet<T> A, ICustomSet<T> B)
         {
-            if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size()))
-            {
-                throw new FormatException("List is infinite");
-            }
+            IsInfinite(A);
+            IsInfinite(B);
 
             foreach (T t in A)
             { 
@@ -53,10 +48,8 @@ namespace AssignmentThree.operations
         /// <returns></returns>
         public ICustomSet<T> Union(ICustomSet<T> A, ICustomSet<T> B)
         {
-            if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size()))
-            {
-                throw new FormatException("List is infinite");
-            }
+            IsInfinite(A);
+            IsInfinite(B);
 
             foreach (T t in B)
             {
@@ -77,10 +70,8 @@ namespace AssignmentThree.operations
         /// <returns></returns>
         public ICustomSet<T> Difference(ICustomSet<T> A, ICustomSet<T> B)
         {
-            if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size()))
-            {
-                throw new FormatException("List is infinite");
-            }
+            IsInfinite(A);
+            IsInfinite(B);
 
             foreach (T t in B)
             {
@@ -100,10 +91,8 @@ namespace AssignmentThree.operations
         /// <returns></returns>
         public ICustomSet<T> Compliment(ICustomSet<T> A, ICustomSet<T> B)
         {
-            if (Double.IsInfinity(A.Size()) || Double.IsInfinity(B.Size()))
-            {
-                throw new FormatException("List is infinite");
-            }
+            IsInfinite(A);
+            IsInfinite(B);
 
             foreach (T t in A)
             {
@@ -145,6 +134,18 @@ namespace AssignmentThree.operations
             if (equal && smallest.Equals(A)) return -1;
             if (equal && smallest.Equals(B)) return 1;
             return -2;
+        }
+
+        /// <summary>
+        /// Makes sure a set is not infinite.
+        /// </summary>
+        /// <param name="A"></param>
+        private void IsInfinite(ICustomSet<T> A)
+        {
+            if (Double.IsInfinity(A.Size()))
+            {
+                throw new FormatException("List is infinite");
+            }
         }
     }
 }
