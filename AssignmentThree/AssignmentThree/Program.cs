@@ -61,8 +61,14 @@ namespace AssignmentThree
             {
                 if (i != 0) Console.Write("{0},", i);
             }
-            
-            Console.WriteLine("\n\nChecks if SubSets works".ToUpper());
+
+
+            Console.WriteLine("\n\nA: {1, 2, 3, 4}");
+            Console.WriteLine("B: {1, 2, 3, 4}");
+            Console.WriteLine("C: {1, 2, 3}");
+            Console.WriteLine("D: {4, 5, 6, 7}\n");
+
+            Console.WriteLine("\nChecks if SubSets works".ToUpper());
             A = new CustomSet<int>() { 1, 2, 3, 4 };
             B = new CustomSet<int>() { 1, 2, 3, 4 };
             CustomSet<int> C = new CustomSet<int>() { 1, 2, 3 };
