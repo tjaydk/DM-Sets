@@ -10,56 +10,59 @@ namespace AssignmentThree
         {
             ISetOperations<int> setOps = new SetOperations<int>();
 
-            Console.WriteLine("Check if Memberships works");
+            Console.WriteLine("A: {1, 2, 3, 4}");
+            Console.WriteLine("B: {3, 4, 5, 6}\n");
+
+            Console.WriteLine("\nCheck if Memberships works".ToUpper());
             ICustomSet<int> A = new CustomSet<int>() { 1, 2, 3, 4 };
             ICustomSet<int> B = new CustomSet<int>() { 3, 4, 5, 6 };
             ICustomSet<int> resultSet = new CustomSet<int>();
             Console.WriteLine("Checks if 1 is a member of A. Should return true: \nReturn Value: " + setOps.Membership(1, A));
             Console.WriteLine("Checks if 5 is a member of A. Should return false: \nReturn Value: " + setOps.Membership(5, A));
 
-            Console.WriteLine("\nChecks if Intersection works");
+            Console.WriteLine("\n\nChecks if Intersection works".ToUpper());
             Console.WriteLine("Intersecting set A with set B. Should return a set with the values 3 and 4");
             resultSet = setOps.Intersection(A, B);
             Console.WriteLine("Printing results: ");
             foreach (int i in resultSet)
             {
-                Console.WriteLine("{0}", i);
+                Console.Write("{0},", i);
             }
 
             A = new CustomSet<int>() { 1, 2, 3, 4 };
             B = new CustomSet<int>() { 3, 4, 5, 6 };
-            Console.WriteLine("\nChecks if Union works");
+            Console.WriteLine("\n\nChecks if Union works".ToUpper());
             Console.WriteLine("Create a union between set A with set B. Should return a set with the values 1, 2, 3, 4, 5 and 6");
             resultSet = setOps.Union(A, B);
             Console.WriteLine("Printing results: ");
             foreach (int i in resultSet)
             {
-                Console.WriteLine("{0}", i);
+                Console.Write("{0},", i);
             }
 
             A = new CustomSet<int>() { 1, 2, 3, 4 };
             B = new CustomSet<int>() { 3, 4, 5, 6 };
-            Console.WriteLine("\nChecks if Difference works");
+            Console.WriteLine("\n\nChecks if Difference works".ToUpper());
             Console.WriteLine("Find the numbers that set A has but B doesn't. Should return a set with the values 1, 2");
             resultSet = setOps.Difference(A, B);
             Console.WriteLine("Printing results: ");
             foreach (int i in resultSet)
             {
-                if (i != 0) Console.WriteLine("{0}", i);
+                if (i != 0) Console.Write("{0},", i);
             }
 
             A = new CustomSet<int>() { 1, 2, 3, 4 };
             B = new CustomSet<int>() { 3, 4, 5, 6 };
-            Console.WriteLine("\nChecks if Compliment works");
+            Console.WriteLine("\n\nChecks if Compliment works".ToUpper());
             Console.WriteLine("Finds the compliment set used for a. Should return a set with the values 5 and 6");
             resultSet = setOps.Compliment(A, B);
             Console.WriteLine("Printing results: ");
             foreach (int i in resultSet)
             {
-                if (i != 0) Console.WriteLine("{0}", i);
+                if (i != 0) Console.Write("{0},", i);
             }
             
-            Console.WriteLine("\nChecks if SubSets works");
+            Console.WriteLine("\n\nChecks if SubSets works".ToUpper());
             A = new CustomSet<int>() { 1, 2, 3, 4 };
             B = new CustomSet<int>() { 1, 2, 3, 4 };
             CustomSet<int> C = new CustomSet<int>() { 1, 2, 3 };
