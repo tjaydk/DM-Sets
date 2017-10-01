@@ -8,5 +8,6 @@ namespace AssignmentThree.model
         void Delete(T key);
         bool Contains(T key);
         int Size();
+        bool IsInfinite();
     }
 }

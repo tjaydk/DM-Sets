@@ -1,6 +1,5 @@
 ﻿using AssignmentThree.model;
 using AssignmentThree.operations;
-using AssignmentThree.subsets;
 using System;
 
 namespace AssignmentThree
@@ -65,8 +64,6 @@ namespace AssignmentThree
             B = new CustomSet<int>() { 1, 2, 3, 4 };
             CustomSet<int> C = new CustomSet<int>() { 1, 2, 3 };
             CustomSet<int> D = new CustomSet<int>() { 4, 5, 6, 7 };
-
-            Subset<int> compare = new Subset<int>();
 
             Console.WriteLine("Set a is the same as set b so it should return 0: RESULT " + setOps.IsSubSetOrEqual(A, B));
             Console.WriteLine("Set b is a subset of set a so it should return 1: RESULT " + setOps.IsSubSetOrEqual(A, C));

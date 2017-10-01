@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace AssignmentThree.model
@@ -178,6 +179,11 @@ namespace AssignmentThree.model
         IEnumerator IEnumerable.GetEnumerator()
         {
             return this.GetEnumerator();
+        }
+
+        public bool IsInfinite()
+        {
+            return Double.IsInfinity(count);
         }
     }
 }
